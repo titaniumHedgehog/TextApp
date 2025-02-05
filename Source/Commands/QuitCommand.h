@@ -1,24 +1,19 @@
 #pragma once
 
-#include <string>
+#include "Command.h"
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-class Command
+class QuitCommand : public Command
 {
 
 public:
 
-						Command(char const* TheVerb);
-	virtual				~Command();
-	virtual void		Execute() = 0;
+					QuitCommand();
 
-	bool				IsVerb(char const* VerbText) const;
-
-private:
-
-	std::string			M_Verb;
+	virtual void	Execute() override;
 
 };
 
 //--------------------------------------------------------------------------------------------------------------------------------
+

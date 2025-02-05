@@ -1,27 +1,18 @@
-#include "Command.h"
-
-#include <string.h>
-
-//--------------------------------------------------------------------------------------------------------------------------------
-
-Command::Command(char const* TheVerb)
-{
-	M_Verb = TheVerb;
-}
+#include "QuitCommand.h"
+#include "../TextApp.h"
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-Command::~Command()
+QuitCommand::QuitCommand() : Command("Quit")
 {
 
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-bool	Command::IsVerb(char const* VerbText) const
+void	QuitCommand::Execute()
 {
-	return _stricmp(VerbText, M_Verb.c_str()) == 0;
+	TextApp::GetInstance()->RequestQuit();
 }
-
 
 //--------------------------------------------------------------------------------------------------------------------------------

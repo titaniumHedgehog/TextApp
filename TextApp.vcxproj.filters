@@ -24,12 +24,24 @@
     <ClCompile Include="Source\Commands\Command.cpp">
       <Filter>Source Files\Commands</Filter>
     </ClCompile>
+    <ClCompile Include="Source\CommandDatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Commands\QuitCommand.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\TextApp.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Commands\Command.h">
+      <Filter>Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CommandDatabase.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commands\QuitCommand.h">
       <Filter>Source Files\Commands</Filter>
     </ClInclude>
   </ItemGroup>
