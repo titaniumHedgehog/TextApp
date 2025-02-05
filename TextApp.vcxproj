@@ -127,10 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="TextApp.cpp" />
+    <ClCompile Include="Source\Commands\Command.cpp" />
+    <ClCompile Include="Source\TextApp.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TextApp.h" />
+    <ClInclude Include="Source\Commands\Command.h" />
+    <ClInclude Include="Source\TextApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
