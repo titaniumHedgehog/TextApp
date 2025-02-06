@@ -1,12 +1,15 @@
 #include "CommandDatabase.h"
 
-#include <algorithm>
+#include "Commands/HelpCommand.h"
 #include "Commands/QuitCommand.h"
+
+#include <algorithm>
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
 CommandDatabase::CommandDatabase()
 {
+	M_CommandList.push_back(new HelpCommand());
 	M_CommandList.push_back(new QuitCommand());
 }
 
@@ -32,6 +35,13 @@ Command* CommandDatabase::FindCommand(std::string const& FindThis)
 	}
 
 	return nullptr;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+std::vector<Command*> const* CommandDatabase::GetCommands() const
+{
+	return &M_CommandList;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------

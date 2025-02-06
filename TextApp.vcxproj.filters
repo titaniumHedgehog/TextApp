@@ -30,6 +30,9 @@
     <ClCompile Include="Source\Commands\QuitCommand.cpp">
       <Filter>Source Files\Commands</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Commands\HelpCommand.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\TextApp.h">
@@ -42,6 +45,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Commands\QuitCommand.h">
+      <Filter>Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commands\HelpCommand.h">
       <Filter>Source Files\Commands</Filter>
     </ClInclude>
   </ItemGroup>

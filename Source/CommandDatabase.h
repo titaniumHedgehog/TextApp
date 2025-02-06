@@ -16,13 +16,14 @@ class CommandDatabase
 
 public:
 
-							CommandDatabase();
-							~CommandDatabase();
+									CommandDatabase();
+									~CommandDatabase();
 
-	Command*				FindCommand(std::string const& FindThis);
+	Command*						FindCommand(std::string const& FindThis);
+	std::vector<Command*> const*	GetCommands() const;
 
 private:
 
-	std::vector<Command*>	M_CommandList;
+	std::vector<Command*>			M_CommandList;
 
 };

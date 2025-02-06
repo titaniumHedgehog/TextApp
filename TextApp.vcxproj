@@ -129,12 +129,14 @@
   <ItemGroup>
     <ClCompile Include="Source\CommandDatabase.cpp" />
     <ClCompile Include="Source\Commands\Command.cpp" />
+    <ClCompile Include="Source\Commands\HelpCommand.cpp" />
     <ClCompile Include="Source\Commands\QuitCommand.cpp" />
     <ClCompile Include="Source\TextApp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\CommandDatabase.h" />
     <ClInclude Include="Source\Commands\Command.h" />
+    <ClInclude Include="Source\Commands\HelpCommand.h" />
     <ClInclude Include="Source\Commands\QuitCommand.h" />
     <ClInclude Include="Source\TextApp.h" />
   </ItemGroup>

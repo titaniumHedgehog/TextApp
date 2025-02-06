@@ -15,6 +15,8 @@ public:
 	void				Run();
 	void				RequestQuit();
 
+	CommandDatabase*	GetCommandDatabase() const;
+
 	static TextApp*		GetInstance();
 
 private:
