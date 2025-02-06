@@ -131,6 +131,9 @@
     <ClCompile Include="Source\Commands\Command.cpp" />
     <ClCompile Include="Source\Commands\HelpCommand.cpp" />
     <ClCompile Include="Source\Commands\QuitCommand.cpp" />
+    <ClCompile Include="Source\LocationDatabase.cpp" />
+    <ClCompile Include="Source\Locations\Location.cpp" />
+    <ClCompile Include="Source\Locations\StartLocation.cpp" />
     <ClCompile Include="Source\TextApp.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +141,9 @@
     <ClInclude Include="Source\Commands\Command.h" />
     <ClInclude Include="Source\Commands\HelpCommand.h" />
     <ClInclude Include="Source\Commands\QuitCommand.h" />
+    <ClInclude Include="Source\LocationDatabase.h" />
+    <ClInclude Include="Source\Locations\Location.h" />
+    <ClInclude Include="Source\Locations\StartLocation.h" />
     <ClInclude Include="Source\TextApp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

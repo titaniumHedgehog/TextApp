@@ -1,33 +1,27 @@
 #pragma once
 
-//--------------------------------------------------------------------------------------------------------------------------------
-
-class CommandDatabase;
-class LocationDatabase;
+#include <vector>
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-class TextApp
+class Location;
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+class LocationDatabase
 {
+
 public:
 
-						TextApp();
-	virtual				~TextApp();
-	void				Run();
-	void				RequestQuit();
+								LocationDatabase();
+	virtual						~LocationDatabase();
 
-	CommandDatabase*	GetCommandDatabase() const;
+	void						Update();
 
-	static TextApp*		GetInstance();
+protected:
 
-private:
-
-	static TextApp*		s_pInstance;
-
-	CommandDatabase*	M_CommandDatabase { nullptr };
-	LocationDatabase*	M_LocationDatabase { nullptr };
-
-	bool				M_Running{ false };
+	Location*					M_CurrentLocation { nullptr };
+	std::vector<Location*>		M_Locations;
 
 };
 

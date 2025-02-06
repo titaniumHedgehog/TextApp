@@ -5,16 +5,15 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="Source Files\Commands">
       <UniqueIdentifier>{4be7d76d-19e7-426c-8878-d56c13019b99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Locations">
+      <UniqueIdentifier>{e52ac93a-db80-4813-8a44-e009ed5abb61}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,6 +32,15 @@
     <ClCompile Include="Source\Commands\HelpCommand.cpp">
       <Filter>Source Files\Commands</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Locations\Location.cpp">
+      <Filter>Source Files\Locations</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\LocationDatabase.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Locations\StartLocation.cpp">
+      <Filter>Source Files\Locations</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\TextApp.h">
@@ -49,6 +57,15 @@
     </ClInclude>
     <ClInclude Include="Source\Commands\HelpCommand.h">
       <Filter>Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Locations\Location.h">
+      <Filter>Source Files\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\LocationDatabase.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Locations\StartLocation.h">
+      <Filter>Source Files\Locations</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

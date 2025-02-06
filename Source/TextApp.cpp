@@ -1,10 +1,13 @@
 // TextApp.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
-#include <iostream>
 #include "TextApp.h"
+
 #include "Commands/Command.h"
 #include "CommandDatabase.h"
+#include "LocationDatabase.h"
+
+#include <iostream>
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
@@ -25,14 +28,16 @@ TextApp* TextApp::s_pInstance{ nullptr };
 TextApp::TextApp()
 {
 	s_pInstance = this;
-	M_Database = new CommandDatabase();
+	M_CommandDatabase = new CommandDatabase();
+	M_LocationDatabase = new LocationDatabase();
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
 TextApp::~TextApp()
 {
-	delete M_Database;
+	delete M_CommandDatabase;
+	delete M_LocationDatabase;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -45,12 +50,14 @@ void	TextApp::Run()
 	M_Running = true;
 	while (M_Running)
 	{
-		std::cout << "Enter a Command\n";
+		M_LocationDatabase->Update();
+
+		std::cout << "\nEnter a Command\n";
 
 		std::string commandLine;
 		std::cin >> commandLine;
 
-		if (Command * ExecuteCommand{ M_Database->FindCommand(commandLine) })
+		if (Command * ExecuteCommand { M_CommandDatabase->FindCommand(commandLine) })
 		{
 			ExecuteCommand->Execute();
 		}
@@ -69,7 +76,7 @@ void	TextApp::RequestQuit()
 
 CommandDatabase* TextApp::GetCommandDatabase() const
 {
-	return M_Database;
+	return M_CommandDatabase;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
