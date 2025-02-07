@@ -1,16 +1,24 @@
 #include "LocationDatabase.h"
 #include "Locations/Location.h"
 #include "Locations/StartLocation.h"
+#include "Locations/CorridorLocation.h"
 
 #include <algorithm>
+#include <iostream>
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
 LocationDatabase::LocationDatabase()
 {
-	M_Locations.push_back(new StartLocation());
+	Location* Start{ new StartLocation() };
+	M_Locations.push_back(Start);
 
-	M_CurrentLocation = M_Locations[0];
+	Location* Corridor0 { new CorridorLocation() };
+
+	Start->AddConnection(ConnectionDirection::North, Corridor0);
+	Corridor0->AddConnection(ConnectionDirection::South, Start);
+
+	M_CurrentLocation = Start;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -28,7 +36,15 @@ void	LocationDatabase::Update()
 {
 	if (M_CurrentLocation != nullptr)
 	{
-		M_CurrentLocation->Update();
+		std::cout << M_CurrentLocation->GetDescription() << "\n";
+		std::cout << "Exits:\n";
+		// output connections
+		for (int connection = 0; connection < M_CurrentLocation->GetNumConnections(); ++connection)
+		{
+			std::cout << M_CurrentLocation->GetConnectionDescription(connection) << "\n";
+		}
+		std::cout << "\n";
+
 	}
 }
 

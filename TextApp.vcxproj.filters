@@ -41,6 +41,15 @@
     <ClCompile Include="Source\Locations\StartLocation.cpp">
       <Filter>Source Files\Locations</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Locations\FightingPitLocation.cpp">
+      <Filter>Source Files\Locations</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Locations\CorridorLocation.cpp">
+      <Filter>Source Files\Locations</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Locations\PitCell.cpp">
+      <Filter>Source Files\Locations</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\TextApp.h">
@@ -65,6 +74,15 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Locations\StartLocation.h">
+      <Filter>Source Files\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Locations\FightingPitLocation.h">
+      <Filter>Source Files\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Locations\CorridorLocation.h">
+      <Filter>Source Files\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Locations\PitCell.h">
       <Filter>Source Files\Locations</Filter>
     </ClInclude>
   </ItemGroup>

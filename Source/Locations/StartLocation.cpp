@@ -11,7 +11,7 @@ StartLocation::StartLocation()
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-void	StartLocation::Update()
+std::string StartLocation::GetDescription() const
 {
-	std::cout << "You are standing at the start location";
+	return "You are standing at the start location";
 }

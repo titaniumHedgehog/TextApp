@@ -3,14 +3,12 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-class StartLocation : public Location
+class CorridorLocation :	public Location
 {
 
 public:
 
-								StartLocation();
-
-	virtual std::string			GetDescription() const override;
+	virtual std::string				GetDescription() const override;
 
 };
 
