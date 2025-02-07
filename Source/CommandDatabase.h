@@ -19,6 +19,7 @@ public:
 									CommandDatabase();
 									~CommandDatabase();
 
+	void							ExecuteCommand(std::string const& CommandLine);
 	Command*						FindCommand(std::string const& FindThis);
 	std::vector<Command*> const*	GetCommands() const;
 

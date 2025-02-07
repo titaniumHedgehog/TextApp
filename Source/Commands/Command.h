@@ -1,6 +1,7 @@
 #pragma once
 
 #include <string>
+#include <vector>
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
@@ -11,7 +12,7 @@ public:
 
 						Command(char const* TheVerb);
 	virtual				~Command();
-	virtual void		Execute() = 0;
+	virtual void		Execute(std::vector<std::string> const& Params) = 0;
 
 	bool				IsVerb(char const* VerbText) const;
 	std::string const&	GetVerb() const;

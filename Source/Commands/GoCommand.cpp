@@ -1,18 +1,25 @@
-#include "QuitCommand.h"
-#include "../TextApp.h"
+#include "GoCommand.h"
+
+#include <algorithm>
+#include <iostream>
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-QuitCommand::QuitCommand() : Command("Quit")
+GoCommand::GoCommand() : Command("Go")
 {
 
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-void	QuitCommand::Execute(std::vector<std::string> const& Params)
+void	GoCommand::Execute(std::vector<std::string> const& Params)
 {
-	TextApp::GetInstance()->RequestQuit();
+	std::cout << "Go for it: ";
+	std::for_each(Params.begin(), Params.end(), [](std::string param) {
+		std::cout << param << " ";
+		});
+
+	std::cout << "\n";
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------

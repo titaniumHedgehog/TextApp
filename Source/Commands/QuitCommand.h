@@ -11,7 +11,7 @@ public:
 
 					QuitCommand();
 
-	virtual void	Execute() override;
+	virtual void	Execute(std::vector<std::string> const& Params) override;
 
 };
 

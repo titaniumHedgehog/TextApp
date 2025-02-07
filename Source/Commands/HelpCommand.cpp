@@ -16,7 +16,7 @@ HelpCommand::HelpCommand() : Command("Help")
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-void	HelpCommand::Execute()
+void	HelpCommand::Execute(std::vector<std::string> const& Params)
 {
 	std::cout << "Command List\n\n";
 

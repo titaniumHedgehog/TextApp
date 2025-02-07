@@ -50,6 +50,9 @@
     <ClCompile Include="Source\Locations\PitCell.cpp">
       <Filter>Source Files\Locations</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Commands\GoCommand.cpp">
+      <Filter>Source Files\Commands</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\TextApp.h">
@@ -84,6 +87,9 @@
     </ClInclude>
     <ClInclude Include="Source\Locations\PitCell.h">
       <Filter>Source Files\Locations</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Commands\GoCommand.h">
+      <Filter>Source Files\Commands</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

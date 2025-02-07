@@ -1,15 +1,15 @@
 #pragma once
+
 #include "Command.h"
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-class HelpCommand : public Command
+class GoCommand : public Command
 {
 
 public:
 
-							HelpCommand();
-
+							GoCommand();
 	virtual void			Execute(std::vector<std::string> const& Params) override;
 
 };

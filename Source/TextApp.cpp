@@ -55,12 +55,9 @@ void	TextApp::Run()
 		std::cout << "\nEnter a Command\n";
 
 		std::string commandLine;
-		std::cin >> commandLine;
+		std::getline(std::cin, commandLine);
 
-		if (Command * ExecuteCommand { M_CommandDatabase->FindCommand(commandLine) })
-		{
-			ExecuteCommand->Execute();
-		}
+		M_CommandDatabase->ExecuteCommand(commandLine);
 
 	}
 }
