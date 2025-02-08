@@ -133,6 +133,7 @@
     <ClCompile Include="Source\Commands\HelpCommand.cpp" />
     <ClCompile Include="Source\Commands\QuitCommand.cpp" />
     <ClCompile Include="Source\LocationDatabase.cpp" />
+    <ClCompile Include="Source\Locations\ConnectionDirection.cpp" />
     <ClCompile Include="Source\Locations\CorridorLocation.cpp" />
     <ClCompile Include="Source\Locations\FightingPitLocation.cpp" />
     <ClCompile Include="Source\Locations\Location.cpp" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Source\Commands\HelpCommand.h" />
     <ClInclude Include="Source\Commands\QuitCommand.h" />
     <ClInclude Include="Source\LocationDatabase.h" />
+    <ClInclude Include="Source\Locations\ConnectionDirection.h" />
     <ClInclude Include="Source\Locations\CorridorLocation.h" />
     <ClInclude Include="Source\Locations\FightingPitLocation.h" />
     <ClInclude Include="Source\Locations\Location.h" />

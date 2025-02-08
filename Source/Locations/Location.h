@@ -7,25 +7,16 @@
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
+class ConnectionDirection;
 class Location;
-
-//--------------------------------------------------------------------------------------------------------------------------------
-
-enum ConnectionDirection
-{
-	North,
-	East,
-	South,
-	West
-};
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
 class Connection
 {
 public:
-	ConnectionDirection		M_Direction;
-	Location*				M_Connection { nullptr };
+	ConnectionDirection const*	M_Direction;
+	Location*					M_Connection { nullptr };
 
 };
 
@@ -38,8 +29,8 @@ public:
 
 	virtual std::string			GetDescription() const = 0;
 
-	void						AddConnection(ConnectionDirection Direction, Location* Connection);
-	int							GetNumConnections() const;
+	void						AddConnection(ConnectionDirection const* Direction, Location* Connection);
+	size_t						GetNumConnections() const;
 	virtual std::string			GetConnectionDescription(int connectionIndex) const;
 
 protected:

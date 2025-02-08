@@ -53,6 +53,9 @@
     <ClCompile Include="Source\Commands\GoCommand.cpp">
       <Filter>Source Files\Commands</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Locations\ConnectionDirection.cpp">
+      <Filter>Source Files\Locations</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\TextApp.h">
@@ -90,6 +93,9 @@
     </ClInclude>
     <ClInclude Include="Source\Commands\GoCommand.h">
       <Filter>Source Files\Commands</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Locations\ConnectionDirection.h">
+      <Filter>Source Files\Locations</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

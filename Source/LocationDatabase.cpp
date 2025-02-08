@@ -1,4 +1,5 @@
 #include "LocationDatabase.h"
+#include "Locations/ConnectionDirection.h"
 #include "Locations/Location.h"
 #include "Locations/StartLocation.h"
 #include "Locations/CorridorLocation.h"
@@ -15,8 +16,8 @@ LocationDatabase::LocationDatabase()
 
 	Location* Corridor0 { new CorridorLocation() };
 
-	Start->AddConnection(ConnectionDirection::North, Corridor0);
-	Corridor0->AddConnection(ConnectionDirection::South, Start);
+	Start->AddConnection(ConnectionDirection::GetOrCreateDirection("North"), Corridor0);
+	Corridor0->AddConnection(ConnectionDirection::GetOrCreateDirection("South"), Start);
 
 	M_CurrentLocation = Start;
 }
