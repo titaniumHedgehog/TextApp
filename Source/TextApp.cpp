@@ -78,6 +78,13 @@ CommandDatabase* TextApp::GetCommandDatabase() const
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
+LocationDatabase* TextApp::GetLocationDatabase() const
+{
+	return M_LocationDatabase;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
 TextApp* TextApp::GetInstance()
 {
 	return s_pInstance;

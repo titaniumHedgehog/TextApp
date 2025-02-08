@@ -1,6 +1,8 @@
 #include "Location.h"
 #include "ConnectionDirection.h"
 
+#include <algorithm>
+
 //--------------------------------------------------------------------------------------------------------------------------------
 
 void	Location::AddConnection(ConnectionDirection const* Direction, Location* Connection)
@@ -29,6 +31,21 @@ std::string		Location::GetConnectionDescription(int connectionIndex) const
 	}
 
 	return "";
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+Location* Location::FindLocation(std::string const& MoveDir) const
+{
+	Location* FoundIt{ nullptr };
+	std::for_each(M_Connections.begin(), M_Connections.end(), [&](Connection const& Direction) {
+		if (Direction.M_Direction->MatchesDir(MoveDir))
+		{
+			FoundIt = Direction.M_Connection;
+		}
+		});
+
+	return FoundIt;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------

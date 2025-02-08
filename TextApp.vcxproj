@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Character\Character.cpp" />
     <ClCompile Include="Source\CommandDatabase.cpp" />
     <ClCompile Include="Source\Commands\Command.cpp" />
     <ClCompile Include="Source\Commands\GoCommand.cpp" />
@@ -142,6 +143,7 @@
     <ClCompile Include="Source\TextApp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Character\Character.h" />
     <ClInclude Include="Source\CommandDatabase.h" />
     <ClInclude Include="Source\Commands\Command.h" />
     <ClInclude Include="Source\Commands\GoCommand.h" />

@@ -32,6 +32,7 @@ public:
 	void						AddConnection(ConnectionDirection const* Direction, Location* Connection);
 	size_t						GetNumConnections() const;
 	virtual std::string			GetConnectionDescription(int connectionIndex) const;
+	Location*					FindLocation(std::string const& MoveDir) const;
 
 protected:
 

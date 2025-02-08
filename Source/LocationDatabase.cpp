@@ -50,3 +50,27 @@ void	LocationDatabase::Update()
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
+
+Location* LocationDatabase::GetCurrentLocation() const
+{
+	return M_CurrentLocation;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+bool	LocationDatabase::Move(std::string const& MoveDir)
+{
+	if (M_CurrentLocation != nullptr)
+	{
+		Location* NewLocation{ M_CurrentLocation->FindLocation(MoveDir) };
+		if (NewLocation != nullptr)
+		{
+			M_CurrentLocation = NewLocation;
+			return true;
+		}
+	}
+
+	return false;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------

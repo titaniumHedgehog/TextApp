@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <vector>
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -17,6 +18,9 @@ public:
 	virtual						~LocationDatabase();
 
 	void						Update();
+
+	Location*					GetCurrentLocation() const;
+	bool						Move(std::string const& MoveDir);
 
 protected:
 

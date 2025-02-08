@@ -17,6 +17,7 @@ public:
 	void				RequestQuit();
 
 	CommandDatabase*	GetCommandDatabase() const;
+	LocationDatabase*	GetLocationDatabase() const;
 
 	static TextApp*		GetInstance();
 

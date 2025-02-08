@@ -1,5 +1,7 @@
 #include "ConnectionDirection.h"
 
+#include <algorithm>
+
 //--------------------------------------------------------------------------------------------------------------------------------
 
 std::map<std::string, ConnectionDirection*> ConnectionDirection::S_Directions;
@@ -29,7 +31,7 @@ ConnectionDirection::ConnectionDirection(std::string const& TheDirection) : M_Na
 
 void	ConnectionDirection::AddAlternateName(std::string const& AlternateName)
 {
-	M_AlterateNames.push_back(AlternateName);
+	M_AlternateNames.push_back(AlternateName);
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -37,6 +39,24 @@ void	ConnectionDirection::AddAlternateName(std::string const& AlternateName)
 std::string const& ConnectionDirection::GetName() const
 {
 	return M_Name;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+bool	ConnectionDirection::MatchesDir(std::string const& MoveDir) const
+{
+	if (_stricmp(MoveDir.c_str(), M_Name.c_str()) == 0)
+	{
+		return true;
+	}
+
+	std::for_each(M_AlternateNames.begin(), M_AlternateNames.end(), [MoveDir](std::string const& alternateName) {
+		if (_stricmp(MoveDir.c_str(), alternateName.c_str()))
+		{
+			return true;
+		}});
+
+	return false;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
