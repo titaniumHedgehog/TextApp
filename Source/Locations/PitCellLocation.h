@@ -1,10 +1,15 @@
-#include "CorridorLocation.h"
+#pragma once
+#include "Location.h"
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-std::string CorridorLocation::GetDescription() const
+class PitCellLocation : public Location
 {
-	return "You are in a corridor";
-}
+
+public:
+
+	virtual std::string				GetDescription() const override;
+
+};
 
 //--------------------------------------------------------------------------------------------------------------------------------

@@ -1,10 +1,10 @@
-#include "CorridorLocation.h"
+#include "PitCellLocation.h"
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-std::string CorridorLocation::GetDescription() const
+std::string PitCellLocation::GetDescription() const
 {
-	return "You are in a corridor";
+	return "You are locked in a cell";
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------

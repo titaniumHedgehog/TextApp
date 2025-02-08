@@ -50,7 +50,7 @@
     <ClCompile Include="Source\Locations\CorridorLocation.cpp">
       <Filter>Source Files\Locations</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Locations\PitCell.cpp">
+    <ClCompile Include="Source\Locations\PitCellLocation.cpp">
       <Filter>Source Files\Locations</Filter>
     </ClCompile>
     <ClCompile Include="Source\Commands\GoCommand.cpp">
@@ -94,7 +94,7 @@
     <ClInclude Include="Source\Locations\CorridorLocation.h">
       <Filter>Source Files\Locations</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Locations\PitCell.h">
+    <ClInclude Include="Source\Locations\PitCellLocation.h">
       <Filter>Source Files\Locations</Filter>
     </ClInclude>
     <ClInclude Include="Source\Commands\GoCommand.h">

@@ -138,7 +138,7 @@
     <ClCompile Include="Source\Locations\CorridorLocation.cpp" />
     <ClCompile Include="Source\Locations\FightingPitLocation.cpp" />
     <ClCompile Include="Source\Locations\Location.cpp" />
-    <ClCompile Include="Source\Locations\PitCell.cpp" />
+    <ClCompile Include="Source\Locations\PitCellLocation.cpp" />
     <ClCompile Include="Source\Locations\StartLocation.cpp" />
     <ClCompile Include="Source\TextApp.cpp" />
   </ItemGroup>
@@ -154,7 +154,7 @@
     <ClInclude Include="Source\Locations\CorridorLocation.h" />
     <ClInclude Include="Source\Locations\FightingPitLocation.h" />
     <ClInclude Include="Source\Locations\Location.h" />
-    <ClInclude Include="Source\Locations\PitCell.h" />
+    <ClInclude Include="Source\Locations\PitCellLocation.h" />
     <ClInclude Include="Source\Locations\StartLocation.h" />
     <ClInclude Include="Source\TextApp.h" />
   </ItemGroup>
