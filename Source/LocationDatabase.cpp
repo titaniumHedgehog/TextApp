@@ -1,6 +1,7 @@
 #include "LocationDatabase.h"
 #include "Locations/ConnectionDirection.h"
 #include "Locations/CorridorLocation.h"
+#include "Locations/FightingPitLocation.h"
 #include "Locations/PitCellLocation.h"
 #include "Locations/Location.h"
 #include "Locations/StartLocation.h"
@@ -18,12 +19,14 @@ LocationDatabase::LocationDatabase()
 	Location* Corridor0 { new CorridorLocation() };
 	Location* Corridor1{ new CorridorLocation() };
 	Location* PitCell{ new PitCellLocation() };
+	Location* FightingPit{ new FightingPitLocation() };
 
 	Start->AddConnection(ConnectionDirection::GetOrCreateDirection("North"), Corridor0);
 	Corridor0->AddConnection(ConnectionDirection::GetOrCreateDirection("South"), Start);
 	Corridor0->AddConnection(ConnectionDirection::GetOrCreateDirection("East"), Corridor1);
 	Corridor1->AddConnection(ConnectionDirection::GetOrCreateDirection("West"), Corridor0);
 	Corridor1->AddConnection(ConnectionDirection::GetOrCreateDirection("Down"), PitCell);
+	PitCell->AddConnection(ConnectionDirection::GetOrCreateDirection("CellDoor"), FightingPit);
 
 	M_CurrentLocation = Start;
 }

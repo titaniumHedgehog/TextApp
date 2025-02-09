@@ -5,9 +5,13 @@
 class Character
 {
 
+public:
+
+	int				GetHP() const;
+
 private:
 
-	int				M_Health;
+	int				M_HP { 4 };
 
 };
 

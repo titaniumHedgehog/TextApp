@@ -6,6 +6,7 @@
 #include "Commands/Command.h"
 #include "CommandDatabase.h"
 #include "LocationDatabase.h"
+#include "Character/Character.h"
 
 #include <iostream>
 
@@ -30,6 +31,7 @@ TextApp::TextApp()
 	s_pInstance = this;
 	M_CommandDatabase = new CommandDatabase();
 	M_LocationDatabase = new LocationDatabase();
+	M_Character = new Character();
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -38,6 +40,7 @@ TextApp::~TextApp()
 {
 	delete M_CommandDatabase;
 	delete M_LocationDatabase;
+	delete M_Character;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -81,6 +84,13 @@ CommandDatabase* TextApp::GetCommandDatabase() const
 LocationDatabase* TextApp::GetLocationDatabase() const
 {
 	return M_LocationDatabase;
+}
+
+//--------------------------------------------------------------------------------------------------------------------------------
+
+Character* TextApp::GetCharacter() const
+{
+	return M_Character;
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------

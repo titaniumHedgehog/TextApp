@@ -3,6 +3,7 @@
 #include "Commands/GoCommand.h"
 #include "Commands/HelpCommand.h"
 #include "Commands/QuitCommand.h"
+#include "Commands/StatusCommand.h"
 
 #include <algorithm>
 
@@ -13,6 +14,7 @@ CommandDatabase::CommandDatabase()
 	M_CommandList.push_back(new GoCommand());
 	M_CommandList.push_back(new HelpCommand());
 	M_CommandList.push_back(new QuitCommand());
+	M_CommandList.push_back(new StatusCommand());
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------

@@ -133,6 +133,7 @@
     <ClCompile Include="Source\Commands\GoCommand.cpp" />
     <ClCompile Include="Source\Commands\HelpCommand.cpp" />
     <ClCompile Include="Source\Commands\QuitCommand.cpp" />
+    <ClCompile Include="Source\Commands\StatusCommand.cpp" />
     <ClCompile Include="Source\LocationDatabase.cpp" />
     <ClCompile Include="Source\Locations\ConnectionDirection.cpp" />
     <ClCompile Include="Source\Locations\CorridorLocation.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="Source\Commands\GoCommand.h" />
     <ClInclude Include="Source\Commands\HelpCommand.h" />
     <ClInclude Include="Source\Commands\QuitCommand.h" />
+    <ClInclude Include="Source\Commands\StatusCommand.h" />
     <ClInclude Include="Source\LocationDatabase.h" />
     <ClInclude Include="Source\Locations\ConnectionDirection.h" />
     <ClInclude Include="Source\Locations\CorridorLocation.h" />

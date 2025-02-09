@@ -1,13 +1,14 @@
 #pragma once
-#include "Location.h"
+#include "Command.h"
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-class FightingPitLocation : public Location
+class StatusCommand : public Command
 {
-
 public:
-	virtual std::string				GetDescription() const override;
+					StatusCommand();
+
+	virtual void	Execute(std::vector<std::string> const& Params) override;
 
 };
 
